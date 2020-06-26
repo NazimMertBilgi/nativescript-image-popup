@@ -1,7 +1,12 @@
 <ActionBar>
-    <Label text="Home"></Label>
+    <Label text="NativeScript Image Popup"></Label>
 </ActionBar>
 
-<GridLayout>
-    <!-- Add your page content here -->
+<GridLayout rows="*,*,*,*,*,*">
+    <Button row="0" text="Show Default Local Image" (tap)="showDefaultImage()"></Button>
+    <Button row="1" text="Show Default Network Image" (tap)="showDefaultNetworkImage()"></Button>
+    <Button row="2" text="Show Width Height Image" (tap)="showWidthHeightImage()"></Button>
+    <Button row="3" text="Show Full Screen Image" (tap)="showFullScreenImage()"></Button>
+    <Button row="4" text="Show Background Transparent Image" (tap)="showBackgroundTransparentImage()"></Button>
+    <Button row="5" text="Show Background Color Image" (tap)="showBackgroundColorImage()"></Button>
 </GridLayout>

@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-image-popup",
 	"version": "1.0.0",
-	"description": "Your awesome NativeScript plugin.",
+	"description": "Image Popup plugin for NativeScript.",
 	"main": "image-popup",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -34,11 +34,13 @@
 		"NativeScript",
 		"JavaScript",
 		"Android",
-		"iOS"
+		"iOS",
+		"Image",
+		"Popup"
 	],
 	"author": {
-		"name": "Your Name",
-		"email": "youremail@yourdomain.com"
+		"name": "Nazım Mert Bilgi",
+		"email": "nmbjobs@outlook.com.tr"
 	},
 	"bugs": {
 		"url": "https://github.com/NazimMertBilgi/nativescript-image-popup/issues"

@@ -1,40 +1,78 @@
-# nativescript-image-popup
+Image Popup plugin for NativeScript.
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+Based on:
 
-Then describe what's the purpose of your plugin. 
+- Android [chathuralakmal/AndroidImagePopup](https://github.com/chathuralakmal/AndroidImagePopup)
+- iOS - Coming Soon.
 
-In case you develop UI plugin, this is where you can add some screenshots.
+# Install
 
-## (Optional) Prerequisites / Requirements
+### NativeScript 6x
 
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
-
-## Installation
-
-Describe your plugin installation steps. Ideally it would be something like:
-
-```javascript
+```bash
 tns plugin add nativescript-image-popup
 ```
 
-## Usage 
+<img src="android_example.gif" width="400">
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
 
-## API
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
+
+
+# Android Specifications
+
+#### Usage Examples
+
+
+```js
+import { ImagePopup } from 'nativescript-image-popup';
+import { ImagePopupOptions } from 'nativescript-image-popup/classes';
+
+// basic use
+ImagePopup.localImagePopup("~/assets/images/nmb.jpg");
+
+// or
+
+ImagePopup.networkImagePopup("https://i.hizliresim.com/kx47Db.png");
+
+
+// with options
+const options: ImagePopupOptions = {
+    path: "https://i.hizliresim.com/kx47Db.png",
+    width: 500,
+    height: 500,
+    fullScreen: true,
+    backgroundColor:ImagePopupBackgroundColors.TRANSPARENT, // or manuel color ( red, blue #ffd200)
+    hideCloseIcon: false;
+    imageOnClickClose: true
+};
+
+```
+
+#### NativeScript Image Popup - Methods
+
+- `localImagePopup(options: ImagePopupOptions | string)`
+- `networkImagePopup(options: ImagePopupOptions | string)`
+
+
+
+## Why the TNS prefixed name?
+
+`TNS` stands for **T**elerik **N**ative**S**cript
+
+iOS uses classes prefixed with `NS` (stemming from the [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP) days of old):
+https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/
+
+To avoid confusion with iOS native classes, `TNS` is used instead.
+
+## Demo
+
+Need extra help getting these Image Popup working in your application? Check out these tutorials that make use of the plugin:
+
+[Image Popup in a NativeScript Core Demo](https://github.com/NazimMertBilgi/nativescript-image-popup/blob/master/demo/app/home/home-page.ts)
+
+[Image Popup in a NativeScript Angular Demo](https://github.com/NazimMertBilgi/nativescript-image-popup/blob/master/demo-angular/src/app/home/home.component.ts)
+
 ## License
 
-Apache License Version 2.0, January 2004
+MIT

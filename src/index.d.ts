@@ -1,6 +1,7 @@
-import { Common } from './image-popup.common';
-export declare class ImagePopup extends Common {
-  // define your typings manually
-  // or..
-  // take the ios or android .d.ts files and copy/paste them here
+import { ImagePopupOptions } from "./classes";
+
+export declare class ImagePopup {
+    static localImagePopup(options: ImagePopupOptions | string)
+
+    static networkImagePopup(options: ImagePopupOptions | string)
 }

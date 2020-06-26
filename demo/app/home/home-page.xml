@@ -1,12 +1,15 @@
-<Page
-    navigatingTo="onNavigatingTo" 
-    xmlns="http://schemas.nativescript.org/tns.xsd">
-    
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+
     <ActionBar>
-        <Label text="Home"></Label>
+        <Label text="NativeScript Image Popup"></Label>
     </ActionBar>
 
-    <GridLayout>
-        <!-- Add your page content here -->
+    <GridLayout rows="*,*,*,*,*,*">
+        <Button row="0" text="Show Default Local Image" tap="showDefaultImage" />
+        <Button row="1" text="Show Default Network Image" tap="showDefaultNetworkImage" />
+        <Button row="2" text="Show Width Height Image" tap="showWidthHeightImage" />
+        <Button row="3" text="Show Full Screen Image" tap="showFullScreenImage" />
+        <Button row="4" text="Show Background Transparent Image" tap="showBackgroundTransparentImage" />
+        <Button row="5" text="Show Background Color Image" tap="showBackgroundColorImage" />
     </GridLayout>
 </Page>
