@@ -47,6 +47,12 @@ const options: ImagePopupOptions = {
     imageOnClickClose: true
 };
 
+ImagePopup.localImagePopup(options);
+
+// or 
+
+ImagePopup.networkImagePopup(options);
+
 ```
 
 #### NativeScript Image Popup - Methods
